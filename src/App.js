@@ -51,7 +51,7 @@ export default function BirthdayApp() {
           <div
             className="relative w-full min-h-screen bg-cover bg-center flex flex-col items-center justify-center p-6 text-white mt-6"
             style={{
-              backgroundImage: "url('https://wallpapercave.com/wp/wp9148702.jpg')",
+              backgroundImage: "url('https://4kwallpapers.com/images/wallpapers/pubg-playerunknowns-battlegrounds-black-background-3840x2160-660.jpg')",
             }}
           >
             {/* Mangoes and Grapes decorations */}
