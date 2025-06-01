@@ -60,12 +60,6 @@ export default function BirthdayApp() {
             }}
           >
             {/* Mangoes and Grapes decorations */}
-            <div className="absolute top-0 left-0 w-full flex justify-between px-6 animate-bounce z-10">
-              <img src="https://i.ibb.co/HDZxRk0/mango.png" alt="mango" className="w-12 h-12" />
-              <img src="https://i.ibb.co/3NcY4FZ/grapes.png" alt="grapes" className="w-12 h-12" />
-              <img src="https://i.ibb.co/HDZxRk0/mango.png" alt="mango" className="w-12 h-12" />
-              <img src="https://i.ibb.co/3NcY4FZ/grapes.png" alt="grapes" className="w-12 h-12" />
-            </div>
 
             {/* Funny Story Card */}
             <Card className="bg-black/70 backdrop-blur-md border-white border-2 max-w-lg text-left z-10">
