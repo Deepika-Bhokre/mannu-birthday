@@ -128,18 +128,27 @@ export default function BirthdayApp() {
       )}
 
       {/* Sorry input logic */}
-      {boxMoved && !puzzleComplete && (
-        <div className="mt-6">
-          <p className="text-red-600 font-bold">Oops! Say sorry 5 times to continue 😜</p>
-          <input
-            type="text"
-            placeholder="Type 'sorry'"
-            className="border p-2 rounded-md mt-2"
-            onBlur={handleSorryInput}
-          />
-          <p className="text-gray-500 text-sm mt-1">You have said sorry {sorryCount} time(s). {5 - sorryCount} left.</p>
-        </div>
-      )}
+      {boxMoved && !puzzleComplete && sorryCount < 5 && (
+  <div className="mt-6">
+    <p className="text-red-600 font-bold">Oops! Say sorry 5 times to continue 😜</p>
+    <input
+      type="text"
+      placeholder="Type 'sorry' and press Enter"
+      className="border p-2 rounded-md mt-2"
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' && e.target.value.toLowerCase() === 'sorry') {
+          setSorryCount((prev) => Math.min(prev + 1, 5));
+          e.target.value = '';
+        }
+      }}
+    />
+    <p className="text-gray-500 text-sm mt-1">
+      You have said sorry {sorryCount} time{sorryCount !== 1 ? 's' : ''}.{' '}
+      {5 - sorryCount > 0 ? `${5 - sorryCount} left.` : ''}
+    </p>
+  </div>
+)}
+
 
       {/* Footer placeholder */}
       <div className="mt-10 text-sm text-gray-600 max-w-md">
