@@ -32,7 +32,7 @@ export default function BirthdayApp() {
       {showConfetti && <Confetti />}
 
       <h1 className="text-4xl font-bold text-purple-800 mb-6 animate-pulse">
-        Happy Birthday Mannu 🎉
+        Advance Happy Birthday Mannu 🎉
       </h1>
       <p className="text-lg text-gray-700 mb-4">From your best friend, Potti 💛</p>
 
@@ -44,7 +44,7 @@ export default function BirthdayApp() {
               <p className="text-md text-green-700 font-medium">You did it, Mannu!</p>
               <p className="text-lg font-bold">Here’s a secret: I love you ❤️</p>
               <p className="text-sm text-gray-500 italic">
-                (Don’t get tensed! I love you as a friend, bro 😎)
+                (Don’t get tensed! I love you as just friend😎)
               </p>
             </CardContent>
           </Card>
@@ -74,7 +74,7 @@ export default function BirthdayApp() {
                 <p>
                   Once upon a drop in Erangel, <strong>Mercury</strong> spotted an enemy but got distracted by flying mangoes 🥭.
                   Meanwhile, <strong>Potti</strong> shouted, “Focus, you noob!” — but ended up looting grapes instead 🍇.
-                  Together, they lost the chicken dinner… but won the <em>bond of best-friendship forever</em>. 💛
+                  Together, they lost the paneer dinner… but won the <em>bond of best-friendship forever</em>. 💛
                 </p>
               </CardContent>
             </Card>
@@ -107,9 +107,9 @@ export default function BirthdayApp() {
               <div className="mt-10 max-w-xl bg-white/10 backdrop-blur-lg p-6 rounded-xl border border-yellow-300 z-10">
                 <h3 className="text-2xl text-yellow-400 font-bold mb-2">Dear Mannu ❤️</h3>
                 <p>
-                  Happy Birthday, bro! 🎂 On this special day, I want to say thank you for being the craziest,
+                  Advance Happy Birthday, idiot! 🎂 I want to say thank you for being the craziest,
                   funniest, most dependable PUBG warrior and best friend I could ask for. From our mango fights to
-                  gym gossips, from coding crashes to chicken dinners, every moment with you is priceless.
+                  gym gossips, from coding crashes to paneer dinners, every moment with you is priceless.
                 </p>
                 <p className="mt-2 italic">You’re not just a friend — you’re family. I love you (as a friend 😎) forever.</p>
                 <p className="mt-2 text-right">– Yours forever, Potti 💛</p>
