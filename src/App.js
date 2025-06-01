@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "./components/ui/button";
 import { Card, CardContent } from "./components/ui/card";
@@ -8,6 +7,8 @@ import Confetti from 'react-confetti';
 export default function BirthdayApp() {
   const [boxMoved, setBoxMoved] = useState(false);
   const [sorryCount, setSorryCount] = useState(0);
+  const [sorryInput, setSorryInput] = useState("");
+  const [sorryMessage, setSorryMessage] = useState("");
   const [showSecret, setShowSecret] = useState(false);
   const [puzzleComplete, setPuzzleComplete] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
@@ -21,11 +22,20 @@ export default function BirthdayApp() {
     }
   };
 
-  const handleSorryInput = (e) => {
-    if (e.target.value.toLowerCase() === "sorry") {
-      setSorryCount((prev) => Math.min(prev + 1, 5));
-      e.target.value = "";
+  const handleSorrySubmit = (e) => {
+    e.preventDefault();
+    if (sorryInput.trim().toLowerCase() === "sorry") {
+      const newCount = Math.min(sorryCount + 1, 5);
+      setSorryCount(newCount);
+      if (newCount < 5) {
+        setSorryMessage(`You've typed sorry ${newCount} time(s). ${5 - newCount} left.`);
+      } else {
+        setSorryMessage("Okay okay! You said it 5 times 😂");
+      }
+    } else {
+      setSorryMessage("That wasn't 'sorry'... try again!");
     }
+    setSorryInput("");
   };
 
   return (
@@ -59,14 +69,18 @@ export default function BirthdayApp() {
 
       {boxMoved && !puzzleComplete && (
         <div className="mt-6">
-          <p className="text-red-600 font-bold">Oops! Say sorry 5 times to continue 😜</p>
-          <input
-            type="text"
-            placeholder="Type 'sorry'"
-            className="border p-2 rounded-md mt-2"
-            onBlur={handleSorryInput}
-          />
-          <p className="text-gray-500 text-sm mt-1">You have said sorry {sorryCount} times.</p>
+          <p className="text-red-600 font-bold mb-2">Oops! Say sorry 5 times to continue 😜</p>
+          <form onSubmit={handleSorrySubmit} className="flex flex-col items-center space-y-2">
+            <input
+              type="text"
+              value={sorryInput}
+              onChange={(e) => setSorryInput(e.target.value)}
+              placeholder="Type 'sorry'"
+              className="border p-2 rounded-md"
+            />
+            <Button type="submit" className="bg-blue-500 text-white">Submit</Button>
+          </form>
+          <p className="text-gray-700 text-sm mt-2">{sorryMessage}</p>
         </div>
       )}
 
@@ -76,3 +90,4 @@ export default function BirthdayApp() {
     </div>
   );
 }
+
