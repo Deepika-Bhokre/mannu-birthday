@@ -76,14 +76,14 @@ export default function BirthdayApp() {
             {/* Trick Quiz */}
             <div className="mt-10 text-center z-10">
               <p className="text-2xl font-semibold mb-4">Quick Question 🔥</p>
-              <p className="mb-6">Am I a good girl or a bad girl? 😏</p>
+              <p className="mb-6">Nuv na mannu and Nen ni potti kada ? 😏</p>
 
               <div className="flex gap-6 justify-center">
                 <button
                   className="bg-green-500 hover:bg-green-600 px-6 py-2 rounded-full font-bold"
                   onClick={() => setShowSecret(true)}
                 >
-                  Good Girl 😇
+                  Yes 😇
                 </button>
 
                 <motion.button
@@ -91,7 +91,7 @@ export default function BirthdayApp() {
                   whileHover={{ x: [0, 80, -80, 0] }}
                   transition={{ duration: 0.5 }}
                 >
-                  Bad Girl 😈
+                  No 😈
                 </motion.button>
               </div>
             </div>
