@@ -52,8 +52,13 @@ export default function BirthdayApp() {
             className="relative w-full min-h-screen bg-cover bg-center flex flex-col items-center justify-center p-6 text-white mt-6"
             style={{
               backgroundImage: "url('https://4kwallpapers.com/images/wallpapers/pubg-playerunknowns-battlegrounds-black-background-3840x2160-660.jpg')",
-            }}
+            }} 
           >
+            {/* Transparent dark overlay */}
+            <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
+
+            {/* Content on top of overlay */}
+            <div className="relative z-10 flex flex-col items-center w-full px-4">
             {/* Mangoes and Grapes decorations */}
 
             {/* Funny Story Card */}
