@@ -31,11 +31,6 @@ export default function BirthdayApp() {
     <div className="min-h-screen bg-yellow-50 flex flex-col items-center justify-center text-center p-4 overflow-x-hidden">
       {showConfetti && <Confetti />}
 
-      <h1 className="text-4xl font-bold text-purple-800 mb-6 animate-pulse">
-        Advance Happy Birthday Mannu 🎉
-      </h1>
-      <p className="text-lg text-gray-700 mb-4">From your best friend, Potti 💛</p>
-
       {puzzleComplete ? (
         <div className="w-full flex flex-col items-center justify-center p-6">
           {/* Initial secret message */}
